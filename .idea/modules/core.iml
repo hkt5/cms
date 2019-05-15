@@ -18,11 +18,23 @@
       <sourceFolder url="file://$MODULE_DIR$/../../modules/core/target/scala-2.12/src_managed/test" isTestSource="true" generated="true" />
       <sourceFolder url="file://$MODULE_DIR$/../../modules/core/target/scala-2.12/twirl/test" isTestSource="true" generated="true" />
       <sourceFolder url="file://$MODULE_DIR$/../../modules/core/conf" type="java-resource" />
+      <excludeFolder url="file://$MODULE_DIR$/../../modules/core/target" />
       <excludeFolder url="file://$MODULE_DIR$/../../modules/core/target/streams" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="sbt: aopalliance:aopalliance:1.0:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.apache.commons:commons-lang3:3.7:jar" level="project" />
+    <orderEntry type="library" name="sbt: io.swagger.core.v3:swagger-models:2.0.0:jar" level="project" />
+    <orderEntry type="library" name="sbt: io.swagger.core.v3:swagger-jaxrs2-servlet-initializer:2.0.0:jar" level="project" />
+    <orderEntry type="library" name="sbt: io.swagger.core.v3:swagger-jaxrs2:2.0.0:jar" level="project" />
+    <orderEntry type="library" name="sbt: io.swagger.core.v3:swagger-integration:2.0.0:jar" level="project" />
+    <orderEntry type="library" name="sbt: io.swagger.core.v3:swagger-core:2.0.0:jar" level="project" />
+    <orderEntry type="library" name="sbt: io.swagger.core.v3:swagger-annotations:2.0.0:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.fasterxml.jackson.module:jackson-module-jaxb-annotations:2.9.1:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:2.9.1:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.fasterxml.jackson.jaxrs:jackson-jaxrs-base:2.9.1:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.9.4:jar" level="project" />
     <orderEntry type="module-library">
       <library name="sbt: unmanaged-sources-and-docs">
         <CLASSES />
@@ -190,16 +202,5 @@
     <orderEntry type="library" name="sbt: ch.qos.logback:logback-core:1.2.3:jar" level="project" />
     <orderEntry type="library" name="sbt: ch.qos.logback:logback-classic:1.2.3:jar" level="project" />
     <orderEntry type="library" scope="TEST" name="sbt: cglib:cglib-nodep:3.1:jar" level="project" />
-    <orderEntry type="library" name="sbt: com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.9.4:jar" level="project" />
-    <orderEntry type="library" name="sbt: com.fasterxml.jackson.jaxrs:jackson-jaxrs-base:2.9.1:jar" level="project" />
-    <orderEntry type="library" name="sbt: com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:2.9.1:jar" level="project" />
-    <orderEntry type="library" name="sbt: com.fasterxml.jackson.module:jackson-module-jaxb-annotations:2.9.1:jar" level="project" />
-    <orderEntry type="library" name="sbt: io.swagger.core.v3:swagger-annotations:2.0.0:jar" level="project" />
-    <orderEntry type="library" name="sbt: io.swagger.core.v3:swagger-core:2.0.0:jar" level="project" />
-    <orderEntry type="library" name="sbt: io.swagger.core.v3:swagger-integration:2.0.0:jar" level="project" />
-    <orderEntry type="library" name="sbt: io.swagger.core.v3:swagger-jaxrs2:2.0.0:jar" level="project" />
-    <orderEntry type="library" name="sbt: io.swagger.core.v3:swagger-jaxrs2-servlet-initializer:2.0.0:jar" level="project" />
-    <orderEntry type="library" name="sbt: io.swagger.core.v3:swagger-models:2.0.0:jar" level="project" />
-    <orderEntry type="library" name="sbt: org.apache.commons:commons-lang3:3.7:jar" level="project" />
   </component>
 </module>
