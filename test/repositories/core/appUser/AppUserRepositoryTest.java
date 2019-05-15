@@ -9,6 +9,7 @@ import models.core.AppUserStatus;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.mindrot.jbcrypt.BCrypt;
 import play.test.WithApplication;
 
 import java.util.List;
@@ -354,9 +355,9 @@ public class AppUserRepositoryTest extends WithApplication {
         appUser.appUserName = this.newUserName;
         appUser.appUserEmail = this.newUserEmail;
         appUser.appUserPhone = this.newUserPhone;
-        appUser.appUserLoginPassword = DefaultUsersPasswords.selectPassword(DefaultUserEnum.JOHNDOE);
-        appUser.appUserStatus = AppUserStatus.findByName("active");
-        appUser.appUserRole = AppUserRole.findByName("user");
+        appUser.appUserLoginPassword = BCrypt.hashpw("P@ssword", BCrypt.gensalt(12));
+        appUser.appUserStatus = AppUserStatus.findById(1L);
+        appUser.appUserRole = AppUserRole.findById(2L);
 
         final AppUserRepository appUserRepository = app.injector().instanceOf(AppUserRepository.class);
         final CompletionStage<Optional<AppUser>> stage = appUserRepository.createAppUser(appUser);
@@ -410,9 +411,13 @@ public class AppUserRepositoryTest extends WithApplication {
     @Test
     public void updateAppUserTest(){
 
+        AppUser appUser = new AppUser();
+        appUser.appUserName = DefaultUsersNames.selectUserName(DefaultUserEnum.JOHNDOE);
+        appUser.appUserEmail = DefaultUsersEmails.selectUserEmail(DefaultUserEnum.JOHNDOE);
+        appUser.appUserPhone = DefaultUsersPhones.selectUserPhone(DefaultUserEnum.JOHNDOE);
         final AppUserRepository appUserRepository = app.injector().instanceOf(AppUserRepository.class);
         final CompletionStage<Optional<AppUser>> stage = appUserRepository.updateAppUser(
-                this.userToUpdate, this.userToUpdate.id
+                this.userToUpdate, 1L
         );
         await().atMost(1, TimeUnit.SECONDS).until(
                 () -> assertThat(stage.toCompletableFuture()).isCompletedWithValueMatching(Optional::isPresent)

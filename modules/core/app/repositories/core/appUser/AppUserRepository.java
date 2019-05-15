@@ -2,14 +2,12 @@ package repositories.core.appUser;
 
 import io.ebean.Ebean;
 import io.ebean.EbeanServer;
-import io.ebean.Transaction;
 import models.core.AppUser;
 import models.core.AppUserPassword;
 import play.db.ebean.EbeanConfig;
 import repositories.core.DatabaseExecutionContext;
 
 import javax.inject.Inject;
-import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
@@ -84,18 +82,15 @@ public class AppUserRepository implements FindAllAppUsersRepository, FindAppUser
         return CompletableFuture.supplyAsync(
                 () -> {
 
-                    ebeanServer.save(appUser);
-                    Optional<AppUser> appUserOptional = findAppUserByAllData(appUser);
-                    AppUserPassword appUserPassword = new AppUserPassword();
-                    appUserOptional.ifPresent(currentUser -> appUserPassword.appUser = currentUser);
-                    appUserPassword.appUserPasswordCreatedAt = new Date();
-                    appUserPassword.appUserPasswordUpdatedAt = new Date();
-                    ebeanServer.save(appUserPassword);
+                    try {
 
-                    return ebeanServer.find(AppUser.class).fetch("appUserStatus").fetch("appUserRole").where()
-                            .eq("appUserName", appUser.appUserName)
-                            .eq("appUserEmail", appUser.appUserEmail)
-                            .eq("appUserPhone", appUser.appUserPhone).findOneOrEmpty();
+                        ebeanServer.save(appUser);
+                        AppUserPassword appUserPassword = new AppUserPassword();
+                        findAppUserByAllData(appUser).ifPresent(user -> appUserPassword.appUser = user);
+                    } finally {
+
+                        return Optional.of(appUser);
+                    }
                 }, executionContext
         );
     }
@@ -116,28 +111,46 @@ public class AppUserRepository implements FindAllAppUsersRepository, FindAppUser
         return CompletableFuture.supplyAsync(
                 () -> {
 
-                    Transaction txn = ebeanServer.beginTransaction();
+                    Optional<AppUser> optionalAppUser = ebeanServer.find(AppUser.class).setId(appUserId).findOneOrEmpty();
+                    if(optionalAppUser.isEmpty()){
+                        return Optional.empty();
+                    }
                     try {
+                        optionalAppUser.ifPresent(
+                                user -> {
+                                    if (appUser.appUserName != null) {
+                                        user.appUserName = appUser.appUserName;
+                                    }
 
-                        Optional<AppUser> optionalAppUser = ebeanServer.find(AppUser.class).setId(appUserId)
-                                .fetch("appUserPassword").fetch("appUserRole").fetch("appUserStatus").findOneOrEmpty();
-                        if(optionalAppUser.isEmpty()){
-                            throw new Exception("Current user is empty!");
-                        }
-                        AppUser currentUser = optionalAppUser.get();
-                        if(currentUser.appUserLoginPassword.equals(appUser.appUserLoginPassword)){
-                            appUser.appUserUpdatedAt = new Date();
-                            ebeanServer.update(appUser.appUserLoginPassword);
-                        }
-                        ebeanServer.update(appUser);
-                    } catch (Exception e) {
-                        e.printStackTrace();
+                                    if (appUser.appUserEmail != null) {
+                                        user.appUserEmail = appUser.appUserEmail;
+                                    }
+                                    if (appUser.appUserPhone != null) {
+                                        user.appUserPhone = appUser.appUserPhone;
+                                    }
+                                    if (appUser.appUserPassword != null) {
+                                        user.appUserPassword = appUser.appUserPassword;
+                                    }
+                                    if (appUser.appUserStatus != null) {
+                                        user.appUserStatus = appUser.appUserStatus;
+                                    }
+                                    if (appUser.appUserRole != null) {
+                                        user.appUserRole = appUser.appUserRole;
+                                    }
+                                    if (
+                                            appUser.appUserLoginPassword != null &&
+                                                    !appUser.appUserLoginPassword.equals(user.appUserLoginPassword)
+                                    ) {
+                                        user.appUserLoginPassword = appUser.appUserLoginPassword;
+                                    }
+                                    user.update();
+                                }
+                        );
+
                     } finally {
 
-                        txn.end();
+                        return optionalAppUser;
                     }
-
-                    return findAppUserByAllData(appUser);
                 }, executionContext
         );
     }
