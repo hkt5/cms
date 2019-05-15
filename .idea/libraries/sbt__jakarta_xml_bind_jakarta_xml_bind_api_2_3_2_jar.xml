@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="sbt: jakarta.xml.bind:jakarta.xml.bind-api:2.3.2:jar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../.ivy2/cache/jakarta.xml.bind/jakarta.xml.bind-api/jars/jakarta.xml.bind-api-2.3.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../.ivy2/cache/jakarta.xml.bind/jakarta.xml.bind-api/srcs/jakarta.xml.bind-api-2.3.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

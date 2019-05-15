@@ -1,0 +1,7 @@
+GET /app-user-statuses/find-all controllers.core.appUserStatus.AppUserStatusController.findAll(request: Request)
+GET /app-user-statuses/find-by-id/:id   controllers.core.appUserStatus.AppUserStatusController.findById(request: Request, id: Long)
+GET /app-user-statuses/find-by-name/:name   controllers.core.appUserStatus.AppUserStatusController.findByName(request: Request, name: String)
+
+GET /app-user-roles/find-all controllers.core.appUserRole.AppUserRoleController.findAll(request: Request)
+GET /app-user-roles/find-by-id/:id controllers.core.appUserRole.AppUserRoleController.findById(request: Request, id: Long)
+GET /app-user-roles/find-by-name/:name controllers.core.appUserRole.AppUserRoleController.findByName(request: Request, name: String)

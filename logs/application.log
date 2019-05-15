@@ -1,0 +1,289 @@
+2019-05-14 16:53:31,332 [ERROR] from application in play-dev-mode-akka.actor.default-dispatcher-3 - 
+
+! @7boofeln7 - Internal server error, for (GET) [/] ->
+ 
+play.api.PlayException: Cannot load module[Module [play.modules.swagger.SwaggerModule] cannot be instantiated.]
+	at play.api.inject.Modules$.constructModule(Module.scala:181)
+	at play.api.inject.Modules$.$anonfun$locate$4(Module.scala:140)
+	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:237)
+	at scala.collection.immutable.HashSet$HashSet1.foreach(HashSet.scala:321)
+	at scala.collection.immutable.HashSet$HashTrieSet.foreach(HashSet.scala:977)
+	at scala.collection.TraversableLike.map(TraversableLike.scala:237)
+	at scala.collection.TraversableLike.map$(TraversableLike.scala:230)
+	at scala.collection.AbstractSet.scala$collection$SetLike$$super$map(Set.scala:51)
+	at scala.collection.SetLike.map(SetLike.scala:104)
+	at scala.collection.SetLike.map$(SetLike.scala:104)
+	at scala.collection.AbstractSet.map(Set.scala:51)
+	at play.api.inject.Modules$.locate(Module.scala:135)
+	at play.api.inject.guice.GuiceableModule$.loadModules(GuiceInjectorBuilder.scala:303)
+	at play.api.inject.guice.GuiceApplicationBuilder$.$anonfun$$lessinit$greater$default$9$1(GuiceApplicationBuilder.scala:36)
+	at play.api.inject.guice.GuiceApplicationBuilder.applicationModule(GuiceApplicationBuilder.scala:115)
+	at play.api.inject.guice.GuiceBuilder.injector(GuiceInjectorBuilder.scala:201)
+	at play.api.inject.guice.GuiceApplicationBuilder.build(GuiceApplicationBuilder.scala:156)
+	at play.api.inject.guice.GuiceApplicationLoader.load(GuiceApplicationLoader.scala:22)
+	at play.core.server.DevServerStart$$anon$1.$anonfun$reload$3(DevServerStart.scala:193)
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:22)
+	at play.core.server.DevServerStart$$anon$1.reload(DevServerStart.scala:185)
+	at play.core.server.DevServerStart$$anon$1.get(DevServerStart.scala:144)
+	at play.core.server.AkkaHttpServer.handleRequest(AkkaHttpServer.scala:304)
+	at play.core.server.AkkaHttpServer.$anonfun$createServerBinding$1(AkkaHttpServer.scala:189)
+	at akka.stream.impl.fusing.MapAsync$$anon$30.onPush(Ops.scala:1262)
+	at akka.stream.impl.fusing.GraphInterpreter.processPush(GraphInterpreter.scala:523)
+	at akka.stream.impl.fusing.GraphInterpreter.execute(GraphInterpreter.scala:409)
+	at akka.stream.impl.fusing.GraphInterpreterShell.runBatch(ActorGraphInterpreter.scala:599)
+	at akka.stream.impl.fusing.GraphInterpreterShell$AsyncInput.execute(ActorGraphInterpreter.scala:480)
+	at akka.stream.impl.fusing.GraphInterpreterShell.processEvent(ActorGraphInterpreter.scala:574)
+	at akka.stream.impl.fusing.ActorGraphInterpreter.akka$stream$impl$fusing$ActorGraphInterpreter$$processEvent(ActorGraphInterpreter.scala:742)
+	at akka.stream.impl.fusing.ActorGraphInterpreter$$anonfun$receive$1.applyOrElse(ActorGraphInterpreter.scala:757)
+	at akka.actor.Actor.aroundReceive(Actor.scala:539)
+	at akka.actor.Actor.aroundReceive$(Actor.scala:537)
+	at akka.stream.impl.fusing.ActorGraphInterpreter.aroundReceive(ActorGraphInterpreter.scala:664)
+	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:610)
+	at akka.actor.ActorCell.invoke(ActorCell.scala:579)
+	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:268)
+	at akka.dispatch.Mailbox.run(Mailbox.scala:229)
+	at akka.dispatch.Mailbox.exec(Mailbox.scala:241)
+	at akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+Caused by: java.lang.ClassNotFoundException: play.modules.swagger.SwaggerModule
+	at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:471)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:588)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	at play.api.inject.Modules$.$anonfun$locate$5(Module.scala:140)
+	at play.api.inject.Modules$.constructModule(Module.scala:152)
+	... 43 common frames omitted
+2019-05-14 16:53:31,335 [ERROR] from application in play-dev-mode-akka.actor.default-dispatcher-7 - 
+
+! @7boofeln7 - Internal server error, for (GET) [/] ->
+ 
+play.api.PlayException: Cannot load module[Module [play.modules.swagger.SwaggerModule] cannot be instantiated.]
+	at play.api.inject.Modules$.constructModule(Module.scala:181)
+	at play.api.inject.Modules$.$anonfun$locate$4(Module.scala:140)
+	at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:237)
+	at scala.collection.immutable.HashSet$HashSet1.foreach(HashSet.scala:321)
+	at scala.collection.immutable.HashSet$HashTrieSet.foreach(HashSet.scala:977)
+	at scala.collection.TraversableLike.map(TraversableLike.scala:237)
+	at scala.collection.TraversableLike.map$(TraversableLike.scala:230)
+	at scala.collection.AbstractSet.scala$collection$SetLike$$super$map(Set.scala:51)
+	at scala.collection.SetLike.map(SetLike.scala:104)
+	at scala.collection.SetLike.map$(SetLike.scala:104)
+	at scala.collection.AbstractSet.map(Set.scala:51)
+	at play.api.inject.Modules$.locate(Module.scala:135)
+	at play.api.inject.guice.GuiceableModule$.loadModules(GuiceInjectorBuilder.scala:303)
+	at play.api.inject.guice.GuiceApplicationBuilder$.$anonfun$$lessinit$greater$default$9$1(GuiceApplicationBuilder.scala:36)
+	at play.api.inject.guice.GuiceApplicationBuilder.applicationModule(GuiceApplicationBuilder.scala:115)
+	at play.api.inject.guice.GuiceBuilder.injector(GuiceInjectorBuilder.scala:201)
+	at play.api.inject.guice.GuiceApplicationBuilder.build(GuiceApplicationBuilder.scala:156)
+	at play.api.inject.guice.GuiceApplicationLoader.load(GuiceApplicationLoader.scala:22)
+	at play.core.server.DevServerStart$$anon$1.$anonfun$reload$3(DevServerStart.scala:193)
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:22)
+	at play.core.server.DevServerStart$$anon$1.reload(DevServerStart.scala:185)
+	at play.core.server.DevServerStart$$anon$1.get(DevServerStart.scala:144)
+	at play.core.server.AkkaHttpServer.handleRequest(AkkaHttpServer.scala:304)
+	at play.core.server.AkkaHttpServer.$anonfun$createServerBinding$1(AkkaHttpServer.scala:189)
+	at akka.stream.impl.fusing.MapAsync$$anon$30.onPush(Ops.scala:1262)
+	at akka.stream.impl.fusing.GraphInterpreter.processPush(GraphInterpreter.scala:523)
+	at akka.stream.impl.fusing.GraphInterpreter.execute(GraphInterpreter.scala:409)
+	at akka.stream.impl.fusing.GraphInterpreterShell.runBatch(ActorGraphInterpreter.scala:599)
+	at akka.stream.impl.fusing.GraphInterpreterShell$AsyncInput.execute(ActorGraphInterpreter.scala:480)
+	at akka.stream.impl.fusing.GraphInterpreterShell.processEvent(ActorGraphInterpreter.scala:574)
+	at akka.stream.impl.fusing.ActorGraphInterpreter.akka$stream$impl$fusing$ActorGraphInterpreter$$processEvent(ActorGraphInterpreter.scala:742)
+	at akka.stream.impl.fusing.ActorGraphInterpreter$$anonfun$receive$1.applyOrElse(ActorGraphInterpreter.scala:757)
+	at akka.actor.Actor.aroundReceive(Actor.scala:539)
+	at akka.actor.Actor.aroundReceive$(Actor.scala:537)
+	at akka.stream.impl.fusing.ActorGraphInterpreter.aroundReceive(ActorGraphInterpreter.scala:664)
+	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:610)
+	at akka.actor.ActorCell.invoke(ActorCell.scala:579)
+	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:268)
+	at akka.dispatch.Mailbox.run(Mailbox.scala:229)
+	at akka.dispatch.Mailbox.exec(Mailbox.scala:241)
+	at akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+Caused by: java.lang.ClassNotFoundException: play.modules.swagger.SwaggerModule
+	at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:471)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:588)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	at play.api.inject.Modules$.$anonfun$locate$5(Module.scala:140)
+	at play.api.inject.Modules$.constructModule(Module.scala:152)
+	... 43 common frames omitted
+2019-05-14 16:54:13,284 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-4 - Database [default] initialized at jdbc:mysql://localhost/silence?useUnicode=true&characterEncoding=utf-8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=Europe/Warsaw
+2019-05-14 16:54:13,301 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-4 - Creating Pool for datasource 'default'
+2019-05-14 16:54:13,408 [INFO] from play.api.db.HikariCPConnectionPool in play-dev-mode-akka.actor.default-dispatcher-4 - datasource [default] bound to JNDI as DefaultDS
+2019-05-14 16:54:14,896 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-4 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2019-05-14 16:54:15,062 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-4 - Application started (Dev) (no global state)
+2019-05-14 16:54:15,079 [DEBUG] from application in play-dev-mode-akka.actor.default-dispatcher-4 - Directory for migration files found. db/migration/default
+2019-05-14 16:54:33,675 [INFO] from play.core.server.AkkaHttpServer in pool-7-thread-6 - Stopping server...
+2019-05-14 16:54:33,696 [INFO] from application in application-akka.actor.default-dispatcher-3 - Shutting down connection pool.
+2019-05-14 16:55:04,874 [INFO] from application in pool-1-thread-1 - Creating Pool for datasource 'default'
+2019-05-14 16:55:04,987 [INFO] from play.api.db.HikariCPConnectionPool in pool-1-thread-1 - datasource [default] bound to JNDI as DefaultDS
+2019-05-14 16:55:06,353 [DEBUG] from application in pool-1-thread-1 - Directory for migration files found. db/migration/default
+2019-05-14 16:55:06,837 [INFO] from application in pool-1-thread-1 - Creating Pool for datasource 'default'
+2019-05-14 16:55:06,843 [INFO] from play.api.db.HikariCPConnectionPool in pool-1-thread-1 - datasource [default] bound to JNDI as DefaultDS
+2019-05-14 16:55:07,024 [DEBUG] from application in pool-1-thread-1 - Directory for migration files found. db/migration/default
+2019-05-14 16:55:07,344 [INFO] from application in pool-1-thread-1 - Creating Pool for datasource 'default'
+2019-05-14 16:55:07,347 [INFO] from play.api.db.HikariCPConnectionPool in pool-1-thread-1 - datasource [default] bound to JNDI as DefaultDS
+2019-05-14 16:55:07,499 [DEBUG] from application in pool-1-thread-1 - Directory for migration files found. db/migration/default
+2019-05-14 16:55:07,782 [INFO] from application in pool-1-thread-1 - Creating Pool for datasource 'default'
+2019-05-14 16:55:07,785 [INFO] from play.api.db.HikariCPConnectionPool in pool-1-thread-1 - datasource [default] bound to JNDI as DefaultDS
+2019-05-14 16:55:07,859 [DEBUG] from application in pool-1-thread-1 - Directory for migration files found. db/migration/default
+2019-05-14 16:55:08,095 [INFO] from application in pool-1-thread-1 - Creating Pool for datasource 'default'
+2019-05-14 16:55:08,099 [INFO] from play.api.db.HikariCPConnectionPool in pool-1-thread-1 - datasource [default] bound to JNDI as DefaultDS
+2019-05-14 16:55:08,174 [DEBUG] from application in pool-1-thread-1 - Directory for migration files found. db/migration/default
+2019-05-14 16:55:08,358 [INFO] from application in pool-1-thread-1 - Creating Pool for datasource 'default'
+2019-05-14 16:55:08,361 [INFO] from play.api.db.HikariCPConnectionPool in pool-1-thread-1 - datasource [default] bound to JNDI as DefaultDS
+2019-05-14 16:55:08,419 [DEBUG] from application in pool-1-thread-1 - Directory for migration files found. db/migration/default
+2019-05-14 16:55:08,635 [INFO] from application in pool-1-thread-1 - Creating Pool for datasource 'default'
+2019-05-14 16:55:08,637 [INFO] from play.api.db.HikariCPConnectionPool in pool-1-thread-1 - datasource [default] bound to JNDI as DefaultDS
+2019-05-14 16:55:08,693 [DEBUG] from application in pool-1-thread-1 - Directory for migration files found. db/migration/default
+2019-05-14 16:55:08,890 [INFO] from application in pool-1-thread-1 - Creating Pool for datasource 'default'
+2019-05-14 16:55:08,895 [INFO] from play.api.db.HikariCPConnectionPool in pool-1-thread-1 - datasource [default] bound to JNDI as DefaultDS
+2019-05-14 16:55:08,954 [DEBUG] from application in pool-1-thread-1 - Directory for migration files found. db/migration/default
+2019-05-14 16:55:09,136 [INFO] from application in pool-1-thread-1 - Creating Pool for datasource 'default'
+2019-05-14 16:55:09,138 [INFO] from play.api.db.HikariCPConnectionPool in pool-1-thread-1 - datasource [default] bound to JNDI as DefaultDS
+2019-05-14 16:55:09,199 [DEBUG] from application in pool-1-thread-1 - Directory for migration files found. db/migration/default
+2019-05-14 16:55:09,376 [INFO] from application in pool-1-thread-1 - Creating Pool for datasource 'default'
+2019-05-14 16:55:09,378 [INFO] from play.api.db.HikariCPConnectionPool in pool-1-thread-1 - datasource [default] bound to JNDI as DefaultDS
+2019-05-14 16:55:09,433 [DEBUG] from application in pool-1-thread-1 - Directory for migration files found. db/migration/default
+2019-05-14 16:55:09,610 [INFO] from application in pool-1-thread-1 - Creating Pool for datasource 'default'
+2019-05-14 16:55:09,612 [INFO] from play.api.db.HikariCPConnectionPool in pool-1-thread-1 - datasource [default] bound to JNDI as DefaultDS
+2019-05-14 16:55:09,658 [DEBUG] from application in pool-1-thread-1 - Directory for migration files found. db/migration/default
+2019-05-14 16:55:09,810 [INFO] from application in pool-1-thread-1 - Creating Pool for datasource 'default'
+2019-05-14 16:55:09,812 [INFO] from play.api.db.HikariCPConnectionPool in pool-1-thread-1 - datasource [default] bound to JNDI as DefaultDS
+2019-05-14 16:55:09,865 [DEBUG] from application in pool-1-thread-1 - Directory for migration files found. db/migration/default
+2019-05-14 16:55:10,012 [INFO] from application in pool-1-thread-1 - Creating Pool for datasource 'default'
+2019-05-14 16:55:10,015 [INFO] from play.api.db.HikariCPConnectionPool in pool-1-thread-1 - datasource [default] bound to JNDI as DefaultDS
+2019-05-14 16:55:10,077 [DEBUG] from application in pool-1-thread-1 - Directory for migration files found. db/migration/default
+2019-05-14 16:55:10,463 [INFO] from application in pool-1-thread-1 - Creating Pool for datasource 'default'
+2019-05-14 16:55:10,465 [INFO] from play.api.db.HikariCPConnectionPool in pool-1-thread-1 - datasource [default] bound to JNDI as DefaultDS
+2019-05-14 16:55:10,528 [DEBUG] from application in pool-1-thread-1 - Directory for migration files found. db/migration/default
+2019-05-14 16:55:10,785 [INFO] from application in pool-1-thread-1 - Creating Pool for datasource 'default'
+2019-05-14 16:55:10,788 [INFO] from play.api.db.HikariCPConnectionPool in pool-1-thread-1 - datasource [default] bound to JNDI as DefaultDS
+2019-05-14 16:55:10,836 [DEBUG] from application in pool-1-thread-1 - Directory for migration files found. db/migration/default
+2019-05-14 16:55:11,069 [INFO] from application in pool-1-thread-1 - Creating Pool for datasource 'default'
+2019-05-14 16:55:11,080 [INFO] from play.api.db.HikariCPConnectionPool in pool-1-thread-1 - datasource [default] bound to JNDI as DefaultDS
+2019-05-14 16:55:11,147 [DEBUG] from application in pool-1-thread-1 - Directory for migration files found. db/migration/default
+2019-05-14 16:55:11,339 [INFO] from application in pool-1-thread-1 - Creating Pool for datasource 'default'
+2019-05-14 16:55:11,341 [INFO] from play.api.db.HikariCPConnectionPool in pool-1-thread-1 - datasource [default] bound to JNDI as DefaultDS
+2019-05-14 16:56:11,366 [DEBUG] from application in pool-1-thread-1 - Directory for migration files found. db/migration/default
+2019-05-14 16:56:11,545 [INFO] from application in pool-1-thread-1 - Creating Pool for datasource 'default'
+2019-05-14 16:56:11,551 [INFO] from play.api.db.HikariCPConnectionPool in pool-1-thread-1 - datasource [default] bound to JNDI as DefaultDS
+2019-05-14 16:57:11,570 [DEBUG] from application in pool-1-thread-1 - Directory for migration files found. db/migration/default
+2019-05-14 16:57:11,724 [INFO] from application in pool-1-thread-1 - Creating Pool for datasource 'default'
+2019-05-14 16:57:11,726 [INFO] from play.api.db.HikariCPConnectionPool in pool-1-thread-1 - datasource [default] bound to JNDI as DefaultDS
+2019-05-14 16:58:11,748 [DEBUG] from application in pool-1-thread-1 - Directory for migration files found. db/migration/default
+2019-05-14 16:58:11,858 [INFO] from application in pool-1-thread-1 - Creating Pool for datasource 'default'
+2019-05-14 16:58:11,860 [INFO] from play.api.db.HikariCPConnectionPool in pool-1-thread-1 - datasource [default] bound to JNDI as DefaultDS
+2019-05-14 16:59:11,878 [DEBUG] from application in pool-1-thread-1 - Directory for migration files found. db/migration/default
+2019-05-14 16:59:11,972 [INFO] from application in pool-1-thread-1 - Creating Pool for datasource 'default'
+2019-05-14 16:59:11,979 [INFO] from play.api.db.HikariCPConnectionPool in pool-1-thread-1 - datasource [default] bound to JNDI as DefaultDS
+2019-05-14 17:00:12,002 [DEBUG] from application in pool-1-thread-1 - Directory for migration files found. db/migration/default
+2019-05-14 17:00:12,125 [INFO] from application in pool-1-thread-1 - Creating Pool for datasource 'default'
+2019-05-14 17:00:12,131 [INFO] from play.api.db.HikariCPConnectionPool in pool-1-thread-1 - datasource [default] bound to JNDI as DefaultDS
+2019-05-14 17:01:12,148 [DEBUG] from application in pool-1-thread-1 - Directory for migration files found. db/migration/default
+2019-05-14 17:01:12,290 [INFO] from application in pool-1-thread-1 - Creating Pool for datasource 'default'
+2019-05-14 17:01:12,292 [INFO] from play.api.db.HikariCPConnectionPool in pool-1-thread-1 - datasource [default] bound to JNDI as DefaultDS
+2019-05-14 17:02:12,309 [DEBUG] from application in pool-1-thread-1 - Directory for migration files found. db/migration/default
+2019-05-14 17:02:12,411 [INFO] from application in pool-1-thread-1 - Creating Pool for datasource 'default'
+2019-05-14 17:02:12,415 [INFO] from play.api.db.HikariCPConnectionPool in pool-1-thread-1 - datasource [default] bound to JNDI as DefaultDS
+2019-05-14 17:03:12,431 [DEBUG] from application in pool-1-thread-1 - Directory for migration files found. db/migration/default
+2019-05-14 17:03:12,547 [INFO] from application in pool-1-thread-1 - Creating Pool for datasource 'default'
+2019-05-14 17:03:12,548 [INFO] from play.api.db.HikariCPConnectionPool in pool-1-thread-1 - datasource [default] bound to JNDI as DefaultDS
+2019-05-14 17:04:12,563 [DEBUG] from application in pool-1-thread-1 - Directory for migration files found. db/migration/default
+2019-05-14 17:04:12,660 [INFO] from application in pool-1-thread-1 - Creating Pool for datasource 'default'
+2019-05-14 17:04:12,661 [INFO] from play.api.db.HikariCPConnectionPool in pool-1-thread-1 - datasource [default] bound to JNDI as DefaultDS
+2019-05-14 17:05:12,677 [DEBUG] from application in pool-1-thread-1 - Directory for migration files found. db/migration/default
+2019-05-14 17:05:12,772 [INFO] from application in pool-1-thread-1 - Creating Pool for datasource 'default'
+2019-05-14 17:05:12,773 [INFO] from play.api.db.HikariCPConnectionPool in pool-1-thread-1 - datasource [default] bound to JNDI as DefaultDS
+2019-05-14 17:06:12,791 [DEBUG] from application in pool-1-thread-1 - Directory for migration files found. db/migration/default
+2019-05-14 17:06:12,905 [INFO] from application in pool-1-thread-1 - Creating Pool for datasource 'default'
+2019-05-14 17:06:12,907 [INFO] from play.api.db.HikariCPConnectionPool in pool-1-thread-1 - datasource [default] bound to JNDI as DefaultDS
+2019-05-14 17:07:12,923 [DEBUG] from application in pool-1-thread-1 - Directory for migration files found. db/migration/default
+2019-05-14 17:07:13,017 [INFO] from application in pool-1-thread-1 - Creating Pool for datasource 'default'
+2019-05-14 17:07:13,019 [INFO] from play.api.db.HikariCPConnectionPool in pool-1-thread-1 - datasource [default] bound to JNDI as DefaultDS
+2019-05-14 17:08:13,032 [DEBUG] from application in pool-1-thread-1 - Directory for migration files found. db/migration/default
+2019-05-14 17:08:13,122 [INFO] from application in pool-1-thread-1 - Creating Pool for datasource 'default'
+2019-05-14 17:08:13,124 [INFO] from play.api.db.HikariCPConnectionPool in pool-1-thread-1 - datasource [default] bound to JNDI as DefaultDS
+2019-05-14 17:09:13,138 [DEBUG] from application in pool-1-thread-1 - Directory for migration files found. db/migration/default
+2019-05-14 17:09:13,224 [INFO] from application in pool-1-thread-1 - Creating Pool for datasource 'default'
+2019-05-14 17:09:13,225 [INFO] from play.api.db.HikariCPConnectionPool in pool-1-thread-1 - datasource [default] bound to JNDI as DefaultDS
+2019-05-14 17:10:13,242 [DEBUG] from application in pool-1-thread-1 - Directory for migration files found. db/migration/default
+2019-05-14 17:10:13,403 [INFO] from application in pool-1-thread-1 - Creating Pool for datasource 'default'
+2019-05-14 17:10:13,405 [INFO] from play.api.db.HikariCPConnectionPool in pool-1-thread-1 - datasource [default] bound to JNDI as DefaultDS
+2019-05-14 17:11:13,422 [DEBUG] from application in pool-1-thread-1 - Directory for migration files found. db/migration/default
+2019-05-14 17:11:13,500 [INFO] from application in pool-1-thread-1 - Creating Pool for datasource 'default'
+2019-05-14 17:11:13,501 [INFO] from play.api.db.HikariCPConnectionPool in pool-1-thread-1 - datasource [default] bound to JNDI as DefaultDS
+2019-05-14 17:12:13,514 [DEBUG] from application in pool-1-thread-1 - Directory for migration files found. db/migration/default
+2019-05-14 17:12:13,593 [INFO] from application in pool-1-thread-1 - Creating Pool for datasource 'default'
+2019-05-14 17:12:13,594 [INFO] from play.api.db.HikariCPConnectionPool in pool-1-thread-1 - datasource [default] bound to JNDI as DefaultDS
+2019-05-14 17:13:13,607 [DEBUG] from application in pool-1-thread-1 - Directory for migration files found. db/migration/default
+2019-05-14 17:13:13,690 [INFO] from application in pool-1-thread-1 - Creating Pool for datasource 'default'
+2019-05-14 17:13:13,695 [INFO] from play.api.db.HikariCPConnectionPool in pool-1-thread-1 - datasource [default] bound to JNDI as DefaultDS
+2019-05-14 17:14:13,708 [DEBUG] from application in pool-1-thread-1 - Directory for migration files found. db/migration/default
+2019-05-14 17:14:13,788 [INFO] from application in pool-1-thread-1 - Creating Pool for datasource 'default'
+2019-05-14 17:14:13,790 [INFO] from play.api.db.HikariCPConnectionPool in pool-1-thread-1 - datasource [default] bound to JNDI as DefaultDS
+2019-05-14 17:15:13,803 [DEBUG] from application in pool-1-thread-1 - Directory for migration files found. db/migration/default
+2019-05-14 17:15:13,901 [INFO] from application in pool-1-thread-1 - Creating Pool for datasource 'default'
+2019-05-14 17:15:13,903 [INFO] from play.api.db.HikariCPConnectionPool in pool-1-thread-1 - datasource [default] bound to JNDI as DefaultDS
+2019-05-14 17:16:13,914 [DEBUG] from application in pool-1-thread-1 - Directory for migration files found. db/migration/default
+2019-05-14 17:16:14,002 [INFO] from application in pool-1-thread-1 - Creating Pool for datasource 'default'
+2019-05-14 17:16:14,004 [INFO] from play.api.db.HikariCPConnectionPool in pool-1-thread-1 - datasource [default] bound to JNDI as DefaultDS
+2019-05-14 17:17:14,021 [DEBUG] from application in pool-1-thread-1 - Directory for migration files found. db/migration/default
+2019-05-14 17:17:14,106 [INFO] from application in pool-1-thread-1 - Creating Pool for datasource 'default'
+2019-05-14 17:17:14,108 [INFO] from play.api.db.HikariCPConnectionPool in pool-1-thread-1 - datasource [default] bound to JNDI as DefaultDS
+2019-05-14 17:18:14,124 [DEBUG] from application in pool-1-thread-1 - Directory for migration files found. db/migration/default
+2019-05-14 17:18:14,203 [INFO] from application in pool-1-thread-1 - Creating Pool for datasource 'default'
+2019-05-14 17:18:14,205 [INFO] from play.api.db.HikariCPConnectionPool in pool-1-thread-1 - datasource [default] bound to JNDI as DefaultDS
+2019-05-14 17:19:14,218 [DEBUG] from application in pool-1-thread-1 - Directory for migration files found. db/migration/default
+2019-05-14 17:19:14,304 [INFO] from application in pool-1-thread-1 - Creating Pool for datasource 'default'
+2019-05-14 17:19:14,306 [INFO] from play.api.db.HikariCPConnectionPool in pool-1-thread-1 - datasource [default] bound to JNDI as DefaultDS
+2019-05-14 17:20:14,318 [DEBUG] from application in pool-1-thread-1 - Directory for migration files found. db/migration/default
+2019-05-14 17:20:14,402 [INFO] from application in pool-1-thread-1 - Creating Pool for datasource 'default'
+2019-05-14 17:20:14,404 [INFO] from play.api.db.HikariCPConnectionPool in pool-1-thread-1 - datasource [default] bound to JNDI as DefaultDS
+2019-05-14 17:21:14,417 [DEBUG] from application in pool-1-thread-1 - Directory for migration files found. db/migration/default
+2019-05-14 17:21:14,496 [INFO] from application in pool-1-thread-1 - Creating Pool for datasource 'default'
+2019-05-14 17:21:14,497 [INFO] from play.api.db.HikariCPConnectionPool in pool-1-thread-1 - datasource [default] bound to JNDI as DefaultDS
+2019-05-14 17:22:14,512 [DEBUG] from application in pool-1-thread-1 - Directory for migration files found. db/migration/default
+2019-05-14 17:22:14,594 [INFO] from application in pool-1-thread-1 - Creating Pool for datasource 'default'
+2019-05-14 17:22:14,595 [INFO] from play.api.db.HikariCPConnectionPool in pool-1-thread-1 - datasource [default] bound to JNDI as DefaultDS
+2019-05-14 17:23:14,607 [DEBUG] from application in pool-1-thread-1 - Directory for migration files found. db/migration/default
+2019-05-14 17:23:14,714 [INFO] from application in pool-1-thread-1 - Creating Pool for datasource 'default'
+2019-05-14 17:23:14,715 [INFO] from play.api.db.HikariCPConnectionPool in pool-1-thread-1 - datasource [default] bound to JNDI as DefaultDS
+2019-05-14 17:24:14,728 [DEBUG] from application in pool-1-thread-1 - Directory for migration files found. db/migration/default
+2019-05-14 17:24:14,805 [INFO] from application in pool-1-thread-1 - Creating Pool for datasource 'default'
+2019-05-14 17:24:14,806 [INFO] from play.api.db.HikariCPConnectionPool in pool-1-thread-1 - datasource [default] bound to JNDI as DefaultDS
+2019-05-14 17:25:14,817 [DEBUG] from application in pool-1-thread-1 - Directory for migration files found. db/migration/default
+2019-05-14 17:25:14,939 [INFO] from application in pool-1-thread-1 - Creating Pool for datasource 'default'
+2019-05-14 17:25:14,940 [INFO] from play.api.db.HikariCPConnectionPool in pool-1-thread-1 - datasource [default] bound to JNDI as DefaultDS
+2019-05-14 17:26:14,954 [DEBUG] from application in pool-1-thread-1 - Directory for migration files found. db/migration/default
+2019-05-14 17:26:15,031 [INFO] from application in pool-1-thread-1 - Creating Pool for datasource 'default'
+2019-05-14 17:26:15,033 [INFO] from play.api.db.HikariCPConnectionPool in pool-1-thread-1 - datasource [default] bound to JNDI as DefaultDS
+2019-05-14 17:27:15,046 [DEBUG] from application in pool-1-thread-1 - Directory for migration files found. db/migration/default
+2019-05-14 17:27:15,127 [INFO] from application in pool-1-thread-1 - Creating Pool for datasource 'default'
+2019-05-14 17:27:15,128 [INFO] from play.api.db.HikariCPConnectionPool in pool-1-thread-1 - datasource [default] bound to JNDI as DefaultDS
+2019-05-14 17:28:15,141 [DEBUG] from application in pool-1-thread-1 - Directory for migration files found. db/migration/default
+2019-05-14 17:28:15,213 [INFO] from application in pool-1-thread-1 - Creating Pool for datasource 'default'
+2019-05-14 17:28:15,215 [INFO] from play.api.db.HikariCPConnectionPool in pool-1-thread-1 - datasource [default] bound to JNDI as DefaultDS
+2019-05-14 17:29:15,226 [DEBUG] from application in pool-1-thread-1 - Directory for migration files found. db/migration/default
+2019-05-14 17:29:15,306 [INFO] from application in pool-1-thread-1 - Creating Pool for datasource 'default'
+2019-05-14 17:29:15,307 [INFO] from play.api.db.HikariCPConnectionPool in pool-1-thread-1 - datasource [default] bound to JNDI as DefaultDS
+2019-05-14 17:30:15,318 [DEBUG] from application in pool-1-thread-1 - Directory for migration files found. db/migration/default
+2019-05-14 17:30:15,475 [INFO] from application in pool-1-thread-1 - Creating Pool for datasource 'default'
+2019-05-14 17:30:15,482 [INFO] from play.api.db.HikariCPConnectionPool in pool-1-thread-1 - datasource [default] bound to JNDI as DefaultDS
+2019-05-14 17:31:15,498 [DEBUG] from application in pool-1-thread-1 - Directory for migration files found. db/migration/default
+2019-05-14 17:31:15,578 [INFO] from application in pool-1-thread-1 - Creating Pool for datasource 'default'
+2019-05-14 17:31:15,580 [INFO] from play.api.db.HikariCPConnectionPool in pool-1-thread-1 - datasource [default] bound to JNDI as DefaultDS
+2019-05-14 17:32:15,592 [DEBUG] from application in pool-1-thread-1 - Directory for migration files found. db/migration/default
+2019-05-14 17:32:15,665 [INFO] from application in pool-1-thread-1 - Creating Pool for datasource 'default'
+2019-05-14 17:32:15,666 [INFO] from play.api.db.HikariCPConnectionPool in pool-1-thread-1 - datasource [default] bound to JNDI as DefaultDS
+2019-05-14 17:33:15,677 [DEBUG] from application in pool-1-thread-1 - Directory for migration files found. db/migration/default
+2019-05-14 17:33:15,760 [INFO] from application in pool-1-thread-1 - Creating Pool for datasource 'default'
+2019-05-14 17:33:15,761 [INFO] from play.api.db.HikariCPConnectionPool in pool-1-thread-1 - datasource [default] bound to JNDI as DefaultDS

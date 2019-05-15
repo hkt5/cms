@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="sbt: com.typesafe.play:play-enhancer:1.2.2:jar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../.ivy2/cache/com.typesafe.play/play-enhancer/jars/play-enhancer-1.2.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../.ivy2/cache/com.typesafe.play/play-enhancer/srcs/play-enhancer-1.2.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

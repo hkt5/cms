@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="sbt: xml-apis:xml-apis:1.4.01:jar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../.ivy2/cache/xml-apis/xml-apis/jars/xml-apis-1.4.01.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../.ivy2/cache/xml-apis/xml-apis/srcs/xml-apis-1.4.01-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
